@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robot-dog-raspberry-pi"
+version = "0.1.0"
+description = "Modular quadruped robot dog framework"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "PyYAML>=6.0.1",
+    "Flask>=3.0.0",
+    "numpy>=1.26",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

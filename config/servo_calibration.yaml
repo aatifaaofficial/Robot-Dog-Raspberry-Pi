@@ -1,0 +1,15 @@
+servo:
+  neutral_angle: 90.0
+  calibration:
+    default:
+      min: 0.0
+      max: 180.0
+    front_left_hip:
+      min: 30.0
+      max: 150.0
+    front_left_knee:
+      min: 20.0
+      max: 160.0
+    front_left_ankle:
+      min: 25.0
+      max: 155.0

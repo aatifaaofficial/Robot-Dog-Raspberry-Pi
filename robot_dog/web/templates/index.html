@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Robot Dog Status</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 2rem; }
+      .card { border: 1px solid #ddd; border-radius: 10px; padding: 1rem; max-width: 640px; }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Robot Dog</h1>
+      <p>Mode: {{ robot.config.mode if robot else 'simulation' }}</p>
+      <p>Status: {{ robot.robot_state.status if robot else 'ready' }}</p>
+    </div>
+  </body>
+</html>
