@@ -6,7 +6,12 @@ from typing import Any, Mapping
 
 class ServoController(ABC):
     def __init__(self, config: Mapping[str, Any] | None = None):
-        self.config = dict(config or {})
+        if hasattr(config, "as_dict"):
+            self.config = config.as_dict().get("robot", {})
+        elif isinstance(config, Mapping):
+            self.config = dict(config)
+        else:
+            self.config = {}
 
     @abstractmethod
     def initialize(self) -> None:
